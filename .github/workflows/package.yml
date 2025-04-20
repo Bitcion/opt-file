@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Ensure script is executable
-        run: chmod +x .github/workflows/package_script.sh
+        run: chmod +x /opt-file/.github/workflows/package_script.sh
 
       - name: Run package script
-        run: bash .github/workflows/package_script.sh
+        run: bash /opt-file/.github/workflows/package_script.sh
