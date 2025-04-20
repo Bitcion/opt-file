@@ -1,0 +1,19 @@
+name: Package Script
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Run package script
+      run: |
+        chmod +x package_script.sh
+        ./package_script.sh
