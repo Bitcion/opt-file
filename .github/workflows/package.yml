@@ -1,0 +1,19 @@
+name: Package Script
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Run package script
+      run: |
+        chmod +x /workspaces/opt-file/.github/workflows/package_script.sh
+        /workspaces/opt-file/.github/workflows/package_script.sh
