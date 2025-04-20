@@ -21,8 +21,9 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git config user.name "Bitcion"
-          git config user.email "bitcoinismine@gmail.com"
+          git config user.name "Bitcion" # Ensure the username remains as 'Bitcion' as requested
+          git config user.email "bitcoinismine@gmail.com" # Corrected email to match the username
+          git remote set-url origin https://github.com/Bitcion/opt-file.git # Explicitly set the remote URL to avoid potential issues
           git add .
           git commit -m "Update generated files"
           git push
